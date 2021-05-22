@@ -868,85 +868,112 @@ public class Menu_Administrador extends javax.swing.JFrame {
 
     private void JB_EliminarListaUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_EliminarListaUsuarioMouseClicked
         try {
-            if (JT_Usuario.getSelectedRow() >= 0) {
-            DefaultTableModel modelo
-                    = (DefaultTableModel) JT_Usuario.getModel();
-            modelo.removeRow(JT_Usuario.getSelectedRow());
-            JT_Usuario.setModel(modelo);
-            //tf_edad_maxima.setText(maxima_edad());
-        }
+            if (admin.equalsIgnoreCase("vjcm1821")) {
+                if (JT_Usuario.getSelectedRow() >= 0) {
+                    DefaultTableModel modelo
+                            = (DefaultTableModel) JT_Usuario.getModel();
+                    modelo.removeRow(JT_Usuario.getSelectedRow());
+                    JT_Usuario.setModel(modelo);
+                    //tf_edad_maxima.setText(maxima_edad());
+                    if (admin.equalsIgnoreCase("vjcm1821")) {
+                        bitacora = "Admin Elimino Usuario\n";
+                        JTA_Bitacora.append(bitacora);
+                    } else {
+                        bitacora = "Usuario Elimino Usuario\n";
+                        JTA_Bitacora.append(bitacora);
+                    }//fin del else
+                }
+            }
+
         } catch (Exception e) {
         }
-        
+
 
     }//GEN-LAST:event_JB_EliminarListaUsuarioMouseClicked
 
     private void JB_LimpiarListaUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_LimpiarListaUsuarioMouseClicked
         try {
             JT_Usuario.setModel(new javax.swing.table.DefaultTableModel(
-                new Object[][]{},
-                new String[]{
-                    "Nombre", "Fecha Nacimiento", "Numero Telefonico", "Correo", "Genero Favorito"
+                    new Object[][]{},
+                    new String[]{
+                        "Nombre", "Fecha Nacimiento", "Numero Telefonico", "Correo", "Genero Favorito"
+                    }
+            ) {
+                Class[] types = new Class[]{
+                    java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.Object.class
+                };
+                boolean[] canEdit = new boolean[]{
+                    false, false, false, false
+                };
+
+                @Override
+                public Class getColumnClass(int columnIndex) {
+                    return types[columnIndex];
                 }
-        ) {
-            Class[] types = new Class[]{
-                java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.Object.class
-            };
-            boolean[] canEdit = new boolean[]{
-                false, false, false, false
-            };
 
-            @Override
-            public Class getColumnClass(int columnIndex) {
-                return types[columnIndex];
-            }
-
-            @Override
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit[columnIndex];
-            }
-        });
+                @Override
+                public boolean isCellEditable(int rowIndex, int columnIndex) {
+                    return canEdit[columnIndex];
+                }
+            });
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Error!!!");
         }
-        
+
 
     }//GEN-LAST:event_JB_LimpiarListaUsuarioMouseClicked
 
     private void CB_ListarUsuarioItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_CB_ListarUsuarioItemStateChanged
         try {
             if (evt.getStateChange() == 2) {
-            Usuarios u = (Usuarios) CB_ListarUsuario.getSelectedItem();
-            Object[] newrow = {
-                u.getNombre_completo(),
-                u.getFecha_n(),
-                u.getNumero_tel(),
-                u.getCorreo(),
-                u.getGenero()
+                Usuarios u = (Usuarios) CB_ListarUsuario.getSelectedItem();
+                Object[] newrow = {
+                    u.getNombre_completo(),
+                    u.getFecha_n(),
+                    u.getNumero_tel(),
+                    u.getCorreo(),
+                    u.getGenero()
 
-            };
-            DefaultTableModel modelo
-                    = (DefaultTableModel) JT_Usuario.getModel();
-            modelo.addRow(newrow);
-            JT_Usuario.setModel(modelo);
-            //tf_edad_maxima.setText(maxima_edad());
-        }
+                };
+                DefaultTableModel modelo
+                        = (DefaultTableModel) JT_Usuario.getModel();
+                modelo.addRow(newrow);
+                JT_Usuario.setModel(modelo);
+                //tf_edad_maxima.setText(maxima_edad());
+                if (admin.equalsIgnoreCase("vjcm1821")) {
+                    bitacora = "Admin Listo Usuario\n";
+                    JTA_Bitacora.append(bitacora);
+                } else {
+                    bitacora = "Usuario Listo Usuario\n";
+                    JTA_Bitacora.append(bitacora);
+                }//fin del else
+            }
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Error!!!");
         }
-        
+
 
     }//GEN-LAST:event_CB_ListarUsuarioItemStateChanged
 
     private void JB_EliminarListaLibroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_EliminarListaLibroMouseClicked
         try {
-          if (JT_Libros.getSelectedRow() >= 0) {
-            DefaultTableModel modelo
-                    = (DefaultTableModel) JT_Libros.getModel();
-            modelo.removeRow(JT_Libros.getSelectedRow());
-            JT_Libros.setModel(modelo);
-            //tf_edad_maxima.setText(maxima_edad());
-        } 
+            if (admin.equalsIgnoreCase(admin)) {
+                if (JT_Libros.getSelectedRow() >= 0) {
+                    DefaultTableModel modelo
+                            = (DefaultTableModel) JT_Libros.getModel();
+                    modelo.removeRow(JT_Libros.getSelectedRow());
+                    JT_Libros.setModel(modelo);
+                    //tf_edad_maxima.setText(maxima_edad());
+                    if (admin.equalsIgnoreCase("vjcm1821")) {
+                        bitacora = "Admin Elimino Libros\n";
+                        JTA_Bitacora.append(bitacora);
+                    } else {
+                        bitacora = "Usuario Elimino Libros\n";
+                        JTA_Bitacora.append(bitacora);
+                    }//fin del else
+                }
+            }
+
         } catch (Exception e) {
         }
     }//GEN-LAST:event_JB_EliminarListaLibroMouseClicked
@@ -979,117 +1006,117 @@ public class Menu_Administrador extends javax.swing.JFrame {
 
     private void CB_ListarLibroItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_CB_ListarLibroItemStateChanged
         try {
-         if (evt.getStateChange() == 2) {
-            Libros l = (Libros) CB_ListarLibro.getSelectedItem();
-            Object[] newrow = {
-                l.getTitulo(),
-                l.getAutor(),
-                l.getGenero(),
-                l.getPuntaje(),
-                l.getEdicion()
+            if (evt.getStateChange() == 2) {
+                Libros l = (Libros) CB_ListarLibro.getSelectedItem();
+                Object[] newrow = {
+                    l.getTitulo(),
+                    l.getAutor(),
+                    l.getGenero(),
+                    l.getPuntaje(),
+                    l.getEdicion()
 
-            };
-            DefaultTableModel modelo
-                    = (DefaultTableModel) JT_Libros.getModel();
-            modelo.addRow(newrow);
-            JT_Libros.setModel(modelo);
-            //tf_edad_maxima.setText(maxima_edad());
-            if(admin.equalsIgnoreCase("vjcm1821")){
-                bitacora = "Admin Listo Libros";
-                JTA_Bitacora.append(bitacora);
-            }else{
-                bitacora = "Usuario Listo Libros";
-            JTA_Bitacora.append(bitacora);
-            }//fin del else
-           
-        }   
+                };
+                DefaultTableModel modelo
+                        = (DefaultTableModel) JT_Libros.getModel();
+                modelo.addRow(newrow);
+                JT_Libros.setModel(modelo);
+                //tf_edad_maxima.setText(maxima_edad());
+                if (admin.equalsIgnoreCase("vjcm1821")) {
+                    bitacora = "Admin Listo Libros\n";
+                    JTA_Bitacora.append(bitacora);
+                } else {
+                    bitacora = "Usuario Listo Libros\n";
+                    JTA_Bitacora.append(bitacora);
+                }//fin del else
+
+            }
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Error");
         }
-        
+
 
     }//GEN-LAST:event_CB_ListarLibroItemStateChanged
 
     private void JB_EliminarUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_EliminarUsuarioMouseClicked
         // TODO add your handling code here:
         try {
-            if(admin.equalsIgnoreCase("vjcm1821")){
-         int selecccionar1 = JOptionPane.showConfirmDialog(this, "Desea Eliminar Este Usuario?");
-        if (selecccionar1 == 0) {
-            //Declarar los Modelos
-            DefaultComboBoxModel cb_1 = (DefaultComboBoxModel) CB_EliminarUsuario.getModel();
-            DefaultComboBoxModel cb_2 = (DefaultComboBoxModel) CB_ListarUsuario.getModel();
-            DefaultComboBoxModel cb_3 = (DefaultComboBoxModel) CB_ModificarUsuario.getModel();
+            if (admin.equalsIgnoreCase("vjcm1821")) {
+                int selecccionar1 = JOptionPane.showConfirmDialog(this, "Desea Eliminar Este Usuario?");
+                if (selecccionar1 == 0) {
+                    //Declarar los Modelos
+                    DefaultComboBoxModel cb_1 = (DefaultComboBoxModel) CB_EliminarUsuario.getModel();
+                    DefaultComboBoxModel cb_2 = (DefaultComboBoxModel) CB_ListarUsuario.getModel();
+                    DefaultComboBoxModel cb_3 = (DefaultComboBoxModel) CB_ModificarUsuario.getModel();
 
-            //Eliminar elemento seleccionado del Combo Box            
-            cb_1.removeElementAt(CB_EliminarUsuario.getSelectedIndex() + 1);
-            cb_2.removeElementAt(CB_ListarUsuario.getSelectedIndex() + 1);
-            cb_1.removeElementAt(CB_ModificarUsuario.getSelectedIndex() + 1);
+                    //Eliminar elemento seleccionado del Combo Box            
+                    cb_1.removeElementAt(CB_EliminarUsuario.getSelectedIndex() + 1);
+                    cb_2.removeElementAt(CB_ListarUsuario.getSelectedIndex() + 1);
+                    cb_1.removeElementAt(CB_ModificarUsuario.getSelectedIndex() + 1);
 
-            //Volver a Setear el Modelo
-            CB_EliminarUsuario.setModel(cb_1);
-            CB_ListarUsuario.setModel(cb_2);
-            CB_ModificarUsuario.setModel(cb_3);
-            
-            if(admin.equalsIgnoreCase("vjcm1821")){
-                bitacora = "Admin Elimino Usuario";
-                JTA_Bitacora.append(bitacora);
-            }else{
-                bitacora = "Usuario Elimino un Usuario";
-            JTA_Bitacora.append(bitacora);
-            }//fin del else
+                    //Volver a Setear el Modelo
+                    CB_EliminarUsuario.setModel(cb_1);
+                    CB_ListarUsuario.setModel(cb_2);
+                    CB_ModificarUsuario.setModel(cb_3);
 
-        }//fin del if que valida el joption
-        
-        if (selecccionar1 == 1) {
-            JOptionPane.showMessageDialog(this, "Bueno, a la Proxima Decidase Antes!!!!");
-        }   
-        }
+                    if (admin.equalsIgnoreCase("vjcm1821")) {
+                        bitacora = "Admin Elimino Usuario\n";
+                        JTA_Bitacora.append(bitacora);
+                    } else {
+                        bitacora = "Usuario Elimino un Usuario\n";
+                        JTA_Bitacora.append(bitacora);
+                    }//fin del else
+
+                }//fin del if que valida el joption
+
+                if (selecccionar1 == 1) {
+                    JOptionPane.showMessageDialog(this, "Bueno, a la Proxima Decidase Antes!!!!");
+                }
+            }
         } catch (Exception e) {
         }
-        
-        
+
+
     }//GEN-LAST:event_JB_EliminarUsuarioMouseClicked
 
     private void JB_EliminarLibrosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_EliminarLibrosMouseClicked
         try {
             int selecccionar = JOptionPane.showConfirmDialog(this, "Desea Eliminar Este Usuario?");
-        if(admin.equalsIgnoreCase("vjcm1821")){
-            if (selecccionar == 0) {
-            //Declarar los Modelos
-            DefaultComboBoxModel cb_1 = (DefaultComboBoxModel) CB_EliminarLibro.getModel();
-            DefaultComboBoxModel cb_2 = (DefaultComboBoxModel) CB_ListarLibro.getModel();
-            DefaultComboBoxModel cb_3 = (DefaultComboBoxModel) CB_ModificarLibro.getModel();
+            if (admin.equalsIgnoreCase("vjcm1821")) {
+                if (selecccionar == 0) {
+                    //Declarar los Modelos
+                    DefaultComboBoxModel cb_1 = (DefaultComboBoxModel) CB_EliminarLibro.getModel();
+                    DefaultComboBoxModel cb_2 = (DefaultComboBoxModel) CB_ListarLibro.getModel();
+                    DefaultComboBoxModel cb_3 = (DefaultComboBoxModel) CB_ModificarLibro.getModel();
 
-            //Eliminar elemento seleccionado del Combo Box            
-            cb_1.removeElementAt(CB_EliminarLibro.getSelectedIndex() + 1);
-            cb_2.removeElementAt(CB_ListarLibro.getSelectedIndex() + 1);
-            cb_1.removeElementAt(CB_ModificarLibro.getSelectedIndex() + 1);
+                    //Eliminar elemento seleccionado del Combo Box            
+                    cb_1.removeElementAt(CB_EliminarLibro.getSelectedIndex() + 1);
+                    cb_2.removeElementAt(CB_ListarLibro.getSelectedIndex() + 1);
+                    cb_1.removeElementAt(CB_ModificarLibro.getSelectedIndex() + 1);
 
-            //Volver a Setear el Modelo
-            CB_EliminarLibro.setModel(cb_1);
-            CB_ListarLibro.setModel(cb_2);
-            CB_ModificarLibro.setModel(cb_3);
-            if(admin.equalsIgnoreCase("vjcm1821")){
-                bitacora = "Admin Elimino Libros";
-                JTA_Bitacora.append(bitacora);
-            }else{
-                bitacora = "Usuario Elimino un Libro";
-            JTA_Bitacora.append(bitacora);
-            }//fin del else
+                    //Volver a Setear el Modelo
+                    CB_EliminarLibro.setModel(cb_1);
+                    CB_ListarLibro.setModel(cb_2);
+                    CB_ModificarLibro.setModel(cb_3);
+                    if (admin.equalsIgnoreCase("vjcm1821")) {
+                        bitacora = "Admin Elimino Libros\n";
+                        JTA_Bitacora.append(bitacora);
+                    } else {
+                        bitacora = "Usuario Elimino un Libro\n";
+                        JTA_Bitacora.append(bitacora);
+                    }//fin del else
 
-        }//fin del if que valida el joption
-        if (selecccionar == 1) {
-            JOptionPane.showMessageDialog(this, "Bueno, a la Proxima Decidase Antes!!!!");
-        }
-        }else{
-            JOptionPane.showMessageDialog(this, "Sorry no es Admin");
-        }
+                }//fin del if que valida el joption
+                if (selecccionar == 1) {
+                    JOptionPane.showMessageDialog(this, "Bueno, a la Proxima Decidase Antes!!!!");
+                }
+            } else {
+                JOptionPane.showMessageDialog(this, "Sorry no es Admin");
+            }
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Errro!!");
         }
-       
-        
+
+
     }//GEN-LAST:event_JB_EliminarLibrosMouseClicked
 
     private void JTf_CopiasDispActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTf_CopiasDispActionPerformed
@@ -1097,7 +1124,7 @@ public class Menu_Administrador extends javax.swing.JFrame {
     }//GEN-LAST:event_JTf_CopiasDispActionPerformed
 
     private void JB_CrearLibroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_CrearLibroMouseClicked
-       
+
         int puntaje, copia_d;
         double valor;
         String edicion, autor, genero, titulo, descripcion;
@@ -1128,80 +1155,78 @@ public class Menu_Administrador extends javax.swing.JFrame {
         JTf_CopiasDisp.setText("");
         JTF_Valor.setText("");
         JTF_Titulo.setText("");
-        
-         if(admin.equalsIgnoreCase("vjcm1821")){
-                bitacora = "Admin Creo Libros";
-                JTA_Bitacora.append(bitacora);
-            }else{
-                bitacora = "Usuario Creo un Libro";
+
+        if (admin.equalsIgnoreCase("vjcm1821")) {
+            bitacora = "Admin Creo Libros\n";
             JTA_Bitacora.append(bitacora);
-            }//fin del else
-        
+        } else {
+            bitacora = "Usuario Creo un Libro\n";
+            JTA_Bitacora.append(bitacora);
+        }//fin del else
+
         JOptionPane.showMessageDialog(this, "Se ha Agregado Correctamente");
 
 
     }//GEN-LAST:event_JB_CrearLibroMouseClicked
 
     private void CB_ModificarLibroItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_CB_ModificarLibroItemStateChanged
-        
-           try {
-         JTF_TituloMod.setText(((Libros) CB_ModificarLibro.getSelectedItem()).getTitulo());
-        int a_publi = Integer.parseInt(JTF_APublicacionMod.getText());
-        a_publi = (((Libros) CB_ModificarLibro.getSelectedItem()).getA_publicacion());
-        int punt = Integer.parseInt(JTF_PuntajeMod.getText());
-        punt = (((Libros) CB_ModificarLibro.getSelectedItem()).getPuntaje());
-        int cop_disp = Integer.parseInt(JTf_CopiasDispMod.getText());
-        cop_disp = (((Libros) CB_ModificarLibro.getSelectedItem()).getCopia_d());
-        JTF_Autor.setText(((Libros) CB_ModificarLibro.getSelectedItem()).getAutor());
-        JTF_EdicionMod.setText(((Libros) CB_ModificarLibro.getSelectedItem()).getEdicion());
-        JTF_DescripcionMod.setText(((Libros) CB_ModificarLibro.getSelectedItem()).getDescripcion());
 
-        double v = Double.parseDouble(JTF_ValorMod.getText());
-        v = (((Libros) CB_ModificarLibro.getSelectedItem()).getValor());   
-        
+        try {
+            
+            JTF_TituloMod.setText(((Libros) CB_ModificarLibro.getSelectedItem()).getTitulo());
+            int a_publi = Integer.parseInt(JTF_APublicacionMod.getText());
+            a_publi = (((Libros) CB_ModificarLibro.getSelectedItem()).getA_publicacion());
+            int punt = Integer.parseInt(JTF_PuntajeMod.getText());
+            punt = (((Libros) CB_ModificarLibro.getSelectedItem()).getPuntaje());
+            int cop_disp = Integer.parseInt(JTf_CopiasDispMod.getText());
+            cop_disp = (((Libros) CB_ModificarLibro.getSelectedItem()).getCopia_d());
+            JTF_Autor.setText(((Libros) CB_ModificarLibro.getSelectedItem()).getAutor());
+            JTF_EdicionMod.setText(((Libros) CB_ModificarLibro.getSelectedItem()).getEdicion());
+            JTF_DescripcionMod.setText(((Libros) CB_ModificarLibro.getSelectedItem()).getDescripcion());
+
+            double v = Double.parseDouble(JTF_ValorMod.getText());
+            v = (((Libros) CB_ModificarLibro.getSelectedItem()).getValor());
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Error!!!");
-        } 
-        
-        
-        
+        }
+
+
     }//GEN-LAST:event_CB_ModificarLibroItemStateChanged
 
     private void JB_ModificarLibroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_ModificarLibroMouseClicked
         try {
-            if(admin.equalsIgnoreCase("vjcm1821")){
+            if (admin.equalsIgnoreCase("vjcm1821")) {
                 DefaultComboBoxModel modelo = (DefaultComboBoxModel) CB_ModificarLibro.getModel();
-        ((Libros) CB_ModificarLibro.getSelectedItem()).setTitulo(JTF_Titulo.getText());
-        int a_p = Integer.parseInt(JTF_APublicacion.getText());
-        ((Libros) CB_ModificarLibro.getSelectedItem()).setA_publicacion(a_p);
-        int punt = Integer.parseInt(JTF_PuntajeMod.getText());
-        ((Libros) CB_ModificarLibro.getSelectedItem()).setPuntaje(punt);
-        int c_d = Integer.parseInt(JTf_CopiasDispMod.getText());
-        ((Libros) CB_ModificarLibro.getSelectedItem()).setCopia_d(c_d);
-        ((Libros) CB_ModificarLibro.getSelectedItem()).setAutor(JTF_AutorMod.getText());
-        ((Libros) CB_ModificarLibro.getSelectedItem()).setDescripcion(JTF_DescripcionMod.getText());
-        ((Libros) CB_ModificarLibro.getSelectedItem()).setEdicion(JTF_EdicionMod.getText());
-        double v2 = Double.parseDouble(JTF_ValorMod.getText());
-        ((Libros) CB_ModificarLibro.getSelectedItem()).setValor(v2);
-        if(admin.equalsIgnoreCase("vjcm1821")){
-                bitacora = "Admin Modifica Libros";
-                JTA_Bitacora.append(bitacora);
-            }else{
-                bitacora = "Usuario Modifico un Libro";
-            JTA_Bitacora.append(bitacora);
-            }//fin del else
-        
-         JOptionPane.showMessageDialog(this, "Cliente modificado exitosamente!!!!");
-            }else{
+                ((Libros) CB_ModificarLibro.getSelectedItem()).setTitulo(JTF_Titulo.getText());
+                int a_p = Integer.parseInt(JTF_APublicacion.getText());
+                ((Libros) CB_ModificarLibro.getSelectedItem()).setA_publicacion(a_p);
+                int punt = Integer.parseInt(JTF_PuntajeMod.getText());
+                ((Libros) CB_ModificarLibro.getSelectedItem()).setPuntaje(punt);
+                int c_d = Integer.parseInt(JTf_CopiasDispMod.getText());
+                ((Libros) CB_ModificarLibro.getSelectedItem()).setCopia_d(c_d);
+                ((Libros) CB_ModificarLibro.getSelectedItem()).setAutor(JTF_AutorMod.getText());
+                ((Libros) CB_ModificarLibro.getSelectedItem()).setDescripcion(JTF_DescripcionMod.getText());
+                ((Libros) CB_ModificarLibro.getSelectedItem()).setEdicion(JTF_EdicionMod.getText());
+                double v2 = Double.parseDouble(JTF_ValorMod.getText());
+                ((Libros) CB_ModificarLibro.getSelectedItem()).setValor(v2);
+                if (admin.equalsIgnoreCase("vjcm1821")) {
+                    bitacora = "Admin Modifica Libros\n";
+                    JTA_Bitacora.append(bitacora);
+                } else {
+                    bitacora = "Usuario Modifico un Libro\n";
+                    JTA_Bitacora.append(bitacora);
+                }//fin del else
+
+                JOptionPane.showMessageDialog(this, "Cliente modificado exitosamente!!!!");
+            } else {
                 JOptionPane.showMessageDialog(this, "Sorry no es Admin");
             }
-             
 
-      
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Error!!!");
         }
-       
+
     }//GEN-LAST:event_JB_ModificarLibroMouseClicked
 
     private void JTf_CopiasDispModActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTf_CopiasDispModActionPerformed
@@ -1228,13 +1253,13 @@ public class Menu_Administrador extends javax.swing.JFrame {
                 JTF_ModNombre.setText("");
                 CB_generoFMod.setSelectedItem(0);
                 if (admin.equalsIgnoreCase("vjcm1821")) {
-                    bitacora = "Admin Modifica Libros";
+                    bitacora = "Admin Modifica Libros\n";
                     JTA_Bitacora.append(bitacora);
                 } else {
-                    bitacora = "Usuario Modifico un Libro";
+                    bitacora = "Usuario Modifico un Libro\n";
                     JTA_Bitacora.append(bitacora);
                 }//fin del else   
-            }else{
+            } else {
                 JOptionPane.showMessageDialog(this, "Sorry no es Admin!!!");
             }
 
@@ -1399,7 +1424,7 @@ public class Menu_Administrador extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane5;
     // End of variables declaration//GEN-END:variables
 String admin;
-String bitacora;
+    String bitacora;
     ArrayList<Libros> libro = new ArrayList();
     ArrayList<Usuarios> usuar = new ArrayList();
     Usuarios u = new Usuarios();

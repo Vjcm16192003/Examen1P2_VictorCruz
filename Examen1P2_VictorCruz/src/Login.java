@@ -265,7 +265,8 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_JB_RegistrarMouseClicked
 
     private void JB_LoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_LoginMouseClicked
-       String username=JTF_UserName.getText();
+        try {
+           String username=JTF_UserName.getText();
         String password=JPF_Password.getText();
         if(JTF_UserName.getText().equalsIgnoreCase("vjcm1821")&&JPF_Password.getText().equalsIgnoreCase("12345")){
             String admin="vjcm1821";
@@ -291,13 +292,17 @@ public class Login extends javax.swing.JFrame {
             }else{
                 JOptionPane.showMessageDialog(null,"El que Ingrseo no existe, Procedad Registrarse");
             }//fin de la condicion
-        }//finc del else principal 
+        }//finc del else principal  
+        } catch (Exception e) {
+        }
+        
        
             
     }//GEN-LAST:event_JB_LoginMouseClicked
 
     private void JB_RegistrarUserMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_RegistrarUserMouseClicked
-        String usernn = JTF_User.getText();
+        try {
+          String usernn = JTF_User.getText();
         String paswword = JPF_PasswordRegistrar.getText();
         Date fecha = JDC_FechaNaci.getDate();
         int num_tel = Integer.parseInt(JFF_NumTelefonico.getText());
@@ -314,7 +319,10 @@ public class Login extends javax.swing.JFrame {
         JTF_Correo.setText("");
         JTF_Nombre.setText("");
         CB_GeneroFav.setSelectedItem(0);
-        Registrar_Usuario.setVisible(false);
+        Registrar_Usuario.setVisible(false);  
+        } catch (Exception e) {
+        }
+        
     }//GEN-LAST:event_JB_RegistrarUserMouseClicked
 
     /**
@@ -387,6 +395,6 @@ public class Login extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
     Usuarios u = new Usuarios();
     ArrayList <Usuarios> user = new ArrayList();
-    String bitacora;
+  
     
 }
