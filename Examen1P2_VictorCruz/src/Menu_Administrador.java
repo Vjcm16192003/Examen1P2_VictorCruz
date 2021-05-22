@@ -9,15 +9,14 @@ import javax.swing.table.DefaultTableModel;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
- * @author Victor Jafet Cruz
+ * @author Victor J. Cruz Mejia
  */
 public class Menu_Administrador extends javax.swing.JFrame {
 
     /**
-     * Creates new form Menu Administrador
+     * Creates new form Menu
      */
     public Menu_Administrador() {
         initComponents();
@@ -66,8 +65,36 @@ public class Menu_Administrador extends javax.swing.JFrame {
         jTabbedPane3 = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
         CB_ModificarLibro = new javax.swing.JComboBox<>();
+        JTF_APublicacionMod = new javax.swing.JTextField();
+        JTF_DescripcionMod = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        JTF_ValorMod = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
+        JB_ModificarLibro = new javax.swing.JButton();
+        jLabel12 = new javax.swing.JLabel();
+        JTF_PuntajeMod = new javax.swing.JTextField();
+        JTF_TituloMod = new javax.swing.JTextField();
+        Edicion1 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        JTF_EdicionMod = new javax.swing.JTextField();
+        JTF_AutorMod = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        JTf_CopiasDispMod = new javax.swing.JTextField();
+        jLabel16 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         CB_ModificarUsuario = new javax.swing.JComboBox<>();
+        JTF_ModNombre = new javax.swing.JTextField();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        CB_generoFMod = new javax.swing.JComboBox<>();
+        JFF_NumeroTel = new javax.swing.JFormattedTextField();
+        jLabel18 = new javax.swing.JLabel();
+        JTF_ModCorreo = new javax.swing.JTextField();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        JDC_ModUser = new com.toedter.calendar.JDateChooser();
+        JB_ModificarUser = new javax.swing.JButton();
         jPanel17 = new javax.swing.JPanel();
         jTabbedPane4 = new javax.swing.JTabbedPane();
         jPanel4 = new javax.swing.JPanel();
@@ -94,6 +121,12 @@ public class Menu_Administrador extends javax.swing.JFrame {
         JB_EliminarUsuario = new javax.swing.JButton();
         jPanel8 = new javax.swing.JPanel();
         jPanel9 = new javax.swing.JPanel();
+        jPanel12 = new javax.swing.JPanel();
+        CB_Amigos = new javax.swing.JComboBox<>();
+        jButton1 = new javax.swing.JButton();
+        jPanel11 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        JTA_Bitacora = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -221,19 +254,53 @@ public class Menu_Administrador extends javax.swing.JFrame {
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 886, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(52, Short.MAX_VALUE))
+                .addContainerGap(110, Short.MAX_VALUE))
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 530, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addContainerGap(81, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Crear", jPanel10);
 
         CB_ModificarLibro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " }));
+        CB_ModificarLibro.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                CB_ModificarLibroItemStateChanged(evt);
+            }
+        });
+
+        jLabel10.setText("Valor");
+
+        jLabel11.setText("Puntaje");
+
+        JB_ModificarLibro.setText("Modificar Libro");
+        JB_ModificarLibro.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JB_ModificarLibroMouseClicked(evt);
+            }
+        });
+
+        jLabel12.setText("Titulo");
+
+        Edicion1.setText("Edicion");
+
+        jLabel13.setText("Autor");
+
+        jLabel14.setText("Año de Publicacion");
+
+        jLabel15.setText("Copias Disponibles");
+
+        JTf_CopiasDispMod.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JTf_CopiasDispModActionPerformed(evt);
+            }
+        });
+
+        jLabel16.setText("Descripcion");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -242,33 +309,180 @@ public class Menu_Administrador extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(250, 250, 250)
                 .addComponent(CB_ModificarLibro, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(342, Short.MAX_VALUE))
+                .addContainerGap(417, Short.MAX_VALUE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(39, 39, 39)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel14)
+                    .addComponent(Edicion1)
+                    .addComponent(jLabel11)
+                    .addComponent(jLabel10)
+                    .addComponent(jLabel16)
+                    .addComponent(jLabel15)
+                    .addComponent(jLabel13)
+                    .addComponent(jLabel12))
+                .addGap(40, 40, 40)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(JTF_AutorMod)
+                    .addComponent(JTf_CopiasDispMod, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(JTF_DescripcionMod)
+                    .addComponent(JTF_APublicacionMod)
+                    .addComponent(JTF_EdicionMod)
+                    .addComponent(JTF_PuntajeMod)
+                    .addComponent(JTF_ValorMod)
+                    .addComponent(JTF_TituloMod, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(JB_ModificarLibro)
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(CB_ModificarLibro, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(442, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12)
+                    .addComponent(JTF_TituloMod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(43, 43, 43)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel13)
+                    .addComponent(JTF_AutorMod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(45, 45, 45)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel15)
+                    .addComponent(JTf_CopiasDispMod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(36, 36, 36)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel16)
+                    .addComponent(JTF_DescripcionMod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(40, 40, 40)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(JTF_ValorMod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(36, 36, 36)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11)
+                    .addComponent(JTF_PuntajeMod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(43, 43, 43)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Edicion1)
+                    .addComponent(JTF_EdicionMod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel14)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(JB_ModificarLibro))
+                    .addComponent(JTF_APublicacionMod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
 
         jTabbedPane3.addTab("Modificar Libro", jPanel2);
+
+        jLabel17.setText("Genero favorito:");
+
+        jLabel9.setText("Numero telefonico: ");
+
+        try {
+            JFF_NumeroTel.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("####-####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+
+        jLabel18.setText("Correo Electronico: ");
+
+        JTF_ModCorreo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JTF_ModCorreoActionPerformed(evt);
+            }
+        });
+
+        jLabel19.setText("Fecha de Nacimiento: ");
+
+        jLabel20.setText("Nombre Completo: ");
+
+        JB_ModificarUser.setText("Modificar Usuario");
+        JB_ModificarUser.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JB_ModificarUserMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(260, 260, 260)
-                .addComponent(CB_ModificarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(352, Short.MAX_VALUE))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(260, 260, 260)
+                        .addComponent(CB_ModificarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(216, 216, 216)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(36, 36, 36)
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(JDC_ModUser, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(JFF_NumeroTel, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel3Layout.createSequentialGroup()
+                                        .addGap(21, 21, 21)
+                                        .addComponent(jLabel17))
+                                    .addComponent(jLabel20))
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel3Layout.createSequentialGroup()
+                                        .addGap(56, 56, 56)
+                                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(JTF_ModCorreo, javax.swing.GroupLayout.DEFAULT_SIZE, 183, Short.MAX_VALUE)
+                                            .addComponent(JTF_ModNombre)))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                                        .addGap(64, 64, 64)
+                                        .addComponent(CB_generoFMod, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                .addContainerGap(356, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(JB_ModificarUser, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(65, 65, 65))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(CB_ModificarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(443, Short.MAX_VALUE))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(77, 77, 77)
+                        .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(JDC_ModUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(29, 29, 29)))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JFF_NumeroTel, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(40, 40, 40)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JTF_ModCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JTF_ModNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel20))
+                .addGap(32, 32, 32)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(CB_generoFMod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel17))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 96, Short.MAX_VALUE)
+                .addComponent(JB_ModificarUser, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(23, 23, 23))
         );
 
         jTabbedPane3.addTab("Modificar Usuario", jPanel3);
@@ -279,15 +493,15 @@ public class Menu_Administrador extends javax.swing.JFrame {
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel14Layout.createSequentialGroup()
                 .addGap(27, 27, 27)
-                .addComponent(jTabbedPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 882, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(54, Short.MAX_VALUE))
+                .addComponent(jTabbedPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 957, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(37, Short.MAX_VALUE))
         );
         jPanel14Layout.setVerticalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel14Layout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addComponent(jTabbedPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 532, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addComponent(jTabbedPane3)
+                .addContainerGap())
         );
 
         jTabbedPane1.addTab("Modificar", jPanel14);
@@ -473,14 +687,14 @@ public class Menu_Administrador extends javax.swing.JFrame {
             .addGroup(jPanel17Layout.createSequentialGroup()
                 .addGap(28, 28, 28)
                 .addComponent(jTabbedPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 876, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addContainerGap(117, Short.MAX_VALUE))
         );
         jPanel17Layout.setVerticalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel17Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(jTabbedPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 529, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addContainerGap(82, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Listar", jPanel17);
@@ -552,14 +766,14 @@ public class Menu_Administrador extends javax.swing.JFrame {
             .addGroup(jPanel13Layout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addComponent(jTabbedPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 882, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(54, Short.MAX_VALUE))
+                .addContainerGap(112, Short.MAX_VALUE))
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel13Layout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addComponent(jTabbedPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 526, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(77, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Eliminar", jPanel13);
@@ -568,27 +782,75 @@ public class Menu_Administrador extends javax.swing.JFrame {
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 963, Short.MAX_VALUE)
+            .addGap(0, 1021, Short.MAX_VALUE)
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 595, Short.MAX_VALUE)
+            .addGap(0, 633, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("tab5", jPanel8);
+        jTabbedPane1.addTab("Prestar Libros", jPanel8);
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 963, Short.MAX_VALUE)
+            .addGap(0, 1021, Short.MAX_VALUE)
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 595, Short.MAX_VALUE)
+            .addGap(0, 633, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("tab6", jPanel9);
+        jTabbedPane1.addTab("Devolver Libros", jPanel9);
+
+        jButton1.setText("Agregar Amigos");
+
+        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
+        jPanel12.setLayout(jPanel12Layout);
+        jPanel12Layout.setHorizontalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addGap(323, 323, 323)
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton1)
+                    .addComponent(CB_Amigos, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(411, Short.MAX_VALUE))
+        );
+        jPanel12Layout.setVerticalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addGap(101, 101, 101)
+                .addComponent(CB_Amigos, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(72, 72, 72)
+                .addComponent(jButton1)
+                .addContainerGap(388, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Agregar Amigos", jPanel12);
+
+        JTA_Bitacora.setColumns(20);
+        JTA_Bitacora.setRows(5);
+        jScrollPane1.setViewportView(JTA_Bitacora);
+
+        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addGap(62, 62, 62)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 889, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(70, Short.MAX_VALUE))
+        );
+        jPanel11Layout.setVerticalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
+                .addContainerGap(50, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 564, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(19, 19, 19))
+        );
+
+        jTabbedPane1.addTab("Bitacora", jPanel11);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -605,22 +867,27 @@ public class Menu_Administrador extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void JB_EliminarListaUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_EliminarListaUsuarioMouseClicked
-        if (JT_Usuario.getSelectedRow() >= 0) {
+        try {
+            if (JT_Usuario.getSelectedRow() >= 0) {
             DefaultTableModel modelo
-            = (DefaultTableModel) JT_Usuario.getModel();
+                    = (DefaultTableModel) JT_Usuario.getModel();
             modelo.removeRow(JT_Usuario.getSelectedRow());
             JT_Usuario.setModel(modelo);
             //tf_edad_maxima.setText(maxima_edad());
         }
+        } catch (Exception e) {
+        }
+        
 
     }//GEN-LAST:event_JB_EliminarListaUsuarioMouseClicked
 
     private void JB_LimpiarListaUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_LimpiarListaUsuarioMouseClicked
-        JT_Usuario.setModel(new javax.swing.table.DefaultTableModel(
-            new Object[][]{},
-            new String[]{
-                "Nombre", "Fecha Nacimiento", "Numero Telefonico", "Correo", "Genero Favorito"
-            }
+        try {
+            JT_Usuario.setModel(new javax.swing.table.DefaultTableModel(
+                new Object[][]{},
+                new String[]{
+                    "Nombre", "Fecha Nacimiento", "Numero Telefonico", "Correo", "Genero Favorito"
+                }
         ) {
             Class[] types = new Class[]{
                 java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.Object.class
@@ -639,13 +906,17 @@ public class Menu_Administrador extends javax.swing.JFrame {
                 return canEdit[columnIndex];
             }
         });
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error!!!");
+        }
+        
 
     }//GEN-LAST:event_JB_LimpiarListaUsuarioMouseClicked
 
     private void CB_ListarUsuarioItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_CB_ListarUsuarioItemStateChanged
-        if (evt.getStateChange() == 2) {
-            Usuarios u = (Usuarios)
-            CB_ListarUsuario.getSelectedItem();
+        try {
+            if (evt.getStateChange() == 2) {
+            Usuarios u = (Usuarios) CB_ListarUsuario.getSelectedItem();
             Object[] newrow = {
                 u.getNombre_completo(),
                 u.getFecha_n(),
@@ -655,26 +926,33 @@ public class Menu_Administrador extends javax.swing.JFrame {
 
             };
             DefaultTableModel modelo
-            = (DefaultTableModel) JT_Usuario.getModel();
+                    = (DefaultTableModel) JT_Usuario.getModel();
             modelo.addRow(newrow);
             JT_Usuario.setModel(modelo);
             //tf_edad_maxima.setText(maxima_edad());
         }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error!!!");
+        }
+        
 
     }//GEN-LAST:event_CB_ListarUsuarioItemStateChanged
 
     private void JB_EliminarListaLibroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_EliminarListaLibroMouseClicked
-       if (JT_Libros.getSelectedRow() >= 0) {
+        try {
+          if (JT_Libros.getSelectedRow() >= 0) {
             DefaultTableModel modelo
                     = (DefaultTableModel) JT_Libros.getModel();
             modelo.removeRow(JT_Libros.getSelectedRow());
             JT_Libros.setModel(modelo);
             //tf_edad_maxima.setText(maxima_edad());
+        } 
+        } catch (Exception e) {
         }
     }//GEN-LAST:event_JB_EliminarListaLibroMouseClicked
 
     private void JB_LimpiarListaLibroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_LimpiarListaLibroMouseClicked
-       JT_Libros.setModel(new javax.swing.table.DefaultTableModel(
+        JT_Libros.setModel(new javax.swing.table.DefaultTableModel(
                 new Object[][]{},
                 new String[]{
                     "Titulo", "Autor", "Genero", "Puntaje", "Edicion"
@@ -700,9 +978,9 @@ public class Menu_Administrador extends javax.swing.JFrame {
     }//GEN-LAST:event_JB_LimpiarListaLibroMouseClicked
 
     private void CB_ListarLibroItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_CB_ListarLibroItemStateChanged
-        if (evt.getStateChange() == 2) {
-            Libros l = (Libros)
-            CB_ListarLibro.getSelectedItem();
+        try {
+         if (evt.getStateChange() == 2) {
+            Libros l = (Libros) CB_ListarLibro.getSelectedItem();
             Object[] newrow = {
                 l.getTitulo(),
                 l.getAutor(),
@@ -712,63 +990,106 @@ public class Menu_Administrador extends javax.swing.JFrame {
 
             };
             DefaultTableModel modelo
-            = (DefaultTableModel) JT_Libros.getModel();
+                    = (DefaultTableModel) JT_Libros.getModel();
             modelo.addRow(newrow);
             JT_Libros.setModel(modelo);
             //tf_edad_maxima.setText(maxima_edad());
+            if(admin.equalsIgnoreCase("vjcm1821")){
+                bitacora = "Admin Listo Libros";
+                JTA_Bitacora.append(bitacora);
+            }else{
+                bitacora = "Usuario Listo Libros";
+            JTA_Bitacora.append(bitacora);
+            }//fin del else
+           
+        }   
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error");
         }
+        
 
     }//GEN-LAST:event_CB_ListarLibroItemStateChanged
 
     private void JB_EliminarUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_EliminarUsuarioMouseClicked
         // TODO add your handling code here:
-        int selecccionar1=JOptionPane.showConfirmDialog(this, "Desea Eliminar Este Usuario?");
-        if(selecccionar1==0)
-        {
+        try {
+            if(admin.equalsIgnoreCase("vjcm1821")){
+         int selecccionar1 = JOptionPane.showConfirmDialog(this, "Desea Eliminar Este Usuario?");
+        if (selecccionar1 == 0) {
             //Declarar los Modelos
-            DefaultComboBoxModel cb_1 = (DefaultComboBoxModel)CB_EliminarUsuario.getModel();
-            DefaultComboBoxModel cb_2 = (DefaultComboBoxModel)CB_ListarUsuario.getModel();
-            DefaultComboBoxModel cb_3 = (DefaultComboBoxModel)CB_ModificarUsuario.getModel();
-            
+            DefaultComboBoxModel cb_1 = (DefaultComboBoxModel) CB_EliminarUsuario.getModel();
+            DefaultComboBoxModel cb_2 = (DefaultComboBoxModel) CB_ListarUsuario.getModel();
+            DefaultComboBoxModel cb_3 = (DefaultComboBoxModel) CB_ModificarUsuario.getModel();
+
             //Eliminar elemento seleccionado del Combo Box            
-            cb_1.removeElementAt(CB_EliminarUsuario.getSelectedIndex()+1);
-            cb_2.removeElementAt(CB_ListarUsuario.getSelectedIndex()+1);
-            cb_1.removeElementAt(CB_ModificarUsuario.getSelectedIndex()+1);
-            
+            cb_1.removeElementAt(CB_EliminarUsuario.getSelectedIndex() + 1);
+            cb_2.removeElementAt(CB_ListarUsuario.getSelectedIndex() + 1);
+            cb_1.removeElementAt(CB_ModificarUsuario.getSelectedIndex() + 1);
+
             //Volver a Setear el Modelo
             CB_EliminarUsuario.setModel(cb_1);
             CB_ListarUsuario.setModel(cb_2);
             CB_ModificarUsuario.setModel(cb_3);
+            
+            if(admin.equalsIgnoreCase("vjcm1821")){
+                bitacora = "Admin Elimino Usuario";
+                JTA_Bitacora.append(bitacora);
+            }else{
+                bitacora = "Usuario Elimino un Usuario";
+            JTA_Bitacora.append(bitacora);
+            }//fin del else
 
         }//fin del if que valida el joption
-        if (selecccionar1==1){
+        
+        if (selecccionar1 == 1) {
             JOptionPane.showMessageDialog(this, "Bueno, a la Proxima Decidase Antes!!!!");
+        }   
         }
+        } catch (Exception e) {
+        }
+        
+        
     }//GEN-LAST:event_JB_EliminarUsuarioMouseClicked
 
     private void JB_EliminarLibrosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_EliminarLibrosMouseClicked
-       int selecccionar=JOptionPane.showConfirmDialog(this, "Desea Eliminar Este Usuario?");
-        if(selecccionar==0)
-        {
+        try {
+            int selecccionar = JOptionPane.showConfirmDialog(this, "Desea Eliminar Este Usuario?");
+        if(admin.equalsIgnoreCase("vjcm1821")){
+            if (selecccionar == 0) {
             //Declarar los Modelos
-            DefaultComboBoxModel cb_1 = (DefaultComboBoxModel)CB_EliminarLibro.getModel();
-            DefaultComboBoxModel cb_2 = (DefaultComboBoxModel)CB_ListarLibro.getModel();
-            DefaultComboBoxModel cb_3 = (DefaultComboBoxModel)CB_ModificarLibro.getModel();
-            
+            DefaultComboBoxModel cb_1 = (DefaultComboBoxModel) CB_EliminarLibro.getModel();
+            DefaultComboBoxModel cb_2 = (DefaultComboBoxModel) CB_ListarLibro.getModel();
+            DefaultComboBoxModel cb_3 = (DefaultComboBoxModel) CB_ModificarLibro.getModel();
+
             //Eliminar elemento seleccionado del Combo Box            
-            cb_1.removeElementAt(CB_EliminarLibro.getSelectedIndex()+1);
-            cb_2.removeElementAt(CB_ListarLibro.getSelectedIndex()+1);
-            cb_1.removeElementAt(CB_ModificarLibro.getSelectedIndex()+1);
-            
+            cb_1.removeElementAt(CB_EliminarLibro.getSelectedIndex() + 1);
+            cb_2.removeElementAt(CB_ListarLibro.getSelectedIndex() + 1);
+            cb_1.removeElementAt(CB_ModificarLibro.getSelectedIndex() + 1);
+
             //Volver a Setear el Modelo
             CB_EliminarLibro.setModel(cb_1);
             CB_ListarLibro.setModel(cb_2);
             CB_ModificarLibro.setModel(cb_3);
+            if(admin.equalsIgnoreCase("vjcm1821")){
+                bitacora = "Admin Elimino Libros";
+                JTA_Bitacora.append(bitacora);
+            }else{
+                bitacora = "Usuario Elimino un Libro";
+            JTA_Bitacora.append(bitacora);
+            }//fin del else
 
         }//fin del if que valida el joption
-        if (selecccionar==1){
+        if (selecccionar == 1) {
             JOptionPane.showMessageDialog(this, "Bueno, a la Proxima Decidase Antes!!!!");
         }
+        }else{
+            JOptionPane.showMessageDialog(this, "Sorry no es Admin");
+        }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Errro!!");
+        }
+       
+        
     }//GEN-LAST:event_JB_EliminarLibrosMouseClicked
 
     private void JTf_CopiasDispActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTf_CopiasDispActionPerformed
@@ -776,7 +1097,8 @@ public class Menu_Administrador extends javax.swing.JFrame {
     }//GEN-LAST:event_JTf_CopiasDispActionPerformed
 
     private void JB_CrearLibroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_CrearLibroMouseClicked
-         int puntaje, copia_d;
+       
+        int puntaje, copia_d;
         double valor;
         String edicion, autor, genero, titulo, descripcion;
         int a_publicacion;
@@ -794,7 +1116,7 @@ public class Menu_Administrador extends javax.swing.JFrame {
         libro.add(new Libros(puntaje, copia_d, valor, edicion, autor, genero, titulo, descripcion, a_publicacion));
         DefaultComboBoxModel modelo
                 = (DefaultComboBoxModel) CB_ModificarLibro.getModel();
-            modelo.addElement(new Libros(puntaje, copia_d, valor, edicion, autor, genero, titulo, descripcion, a_publicacion));
+        modelo.addElement(new Libros(puntaje, copia_d, valor, edicion, autor, genero, titulo, descripcion, a_publicacion));
         CB_ModificarLibro.setModel(modelo);
         CB_EliminarLibro.setModel(modelo);
         CB_ListarLibro.setModel(modelo);
@@ -807,12 +1129,124 @@ public class Menu_Administrador extends javax.swing.JFrame {
         JTF_Valor.setText("");
         JTF_Titulo.setText("");
         
+         if(admin.equalsIgnoreCase("vjcm1821")){
+                bitacora = "Admin Creo Libros";
+                JTA_Bitacora.append(bitacora);
+            }else{
+                bitacora = "Usuario Creo un Libro";
+            JTA_Bitacora.append(bitacora);
+            }//fin del else
+        
         JOptionPane.showMessageDialog(this, "Se ha Agregado Correctamente");
-        
-        
-        
-     
+
+
     }//GEN-LAST:event_JB_CrearLibroMouseClicked
+
+    private void CB_ModificarLibroItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_CB_ModificarLibroItemStateChanged
+        
+           try {
+         JTF_TituloMod.setText(((Libros) CB_ModificarLibro.getSelectedItem()).getTitulo());
+        int a_publi = Integer.parseInt(JTF_APublicacionMod.getText());
+        a_publi = (((Libros) CB_ModificarLibro.getSelectedItem()).getA_publicacion());
+        int punt = Integer.parseInt(JTF_PuntajeMod.getText());
+        punt = (((Libros) CB_ModificarLibro.getSelectedItem()).getPuntaje());
+        int cop_disp = Integer.parseInt(JTf_CopiasDispMod.getText());
+        cop_disp = (((Libros) CB_ModificarLibro.getSelectedItem()).getCopia_d());
+        JTF_Autor.setText(((Libros) CB_ModificarLibro.getSelectedItem()).getAutor());
+        JTF_EdicionMod.setText(((Libros) CB_ModificarLibro.getSelectedItem()).getEdicion());
+        JTF_DescripcionMod.setText(((Libros) CB_ModificarLibro.getSelectedItem()).getDescripcion());
+
+        double v = Double.parseDouble(JTF_ValorMod.getText());
+        v = (((Libros) CB_ModificarLibro.getSelectedItem()).getValor());   
+        
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error!!!");
+        } 
+        
+        
+        
+    }//GEN-LAST:event_CB_ModificarLibroItemStateChanged
+
+    private void JB_ModificarLibroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_ModificarLibroMouseClicked
+        try {
+            if(admin.equalsIgnoreCase("vjcm1821")){
+                DefaultComboBoxModel modelo = (DefaultComboBoxModel) CB_ModificarLibro.getModel();
+        ((Libros) CB_ModificarLibro.getSelectedItem()).setTitulo(JTF_Titulo.getText());
+        int a_p = Integer.parseInt(JTF_APublicacion.getText());
+        ((Libros) CB_ModificarLibro.getSelectedItem()).setA_publicacion(a_p);
+        int punt = Integer.parseInt(JTF_PuntajeMod.getText());
+        ((Libros) CB_ModificarLibro.getSelectedItem()).setPuntaje(punt);
+        int c_d = Integer.parseInt(JTf_CopiasDispMod.getText());
+        ((Libros) CB_ModificarLibro.getSelectedItem()).setCopia_d(c_d);
+        ((Libros) CB_ModificarLibro.getSelectedItem()).setAutor(JTF_AutorMod.getText());
+        ((Libros) CB_ModificarLibro.getSelectedItem()).setDescripcion(JTF_DescripcionMod.getText());
+        ((Libros) CB_ModificarLibro.getSelectedItem()).setEdicion(JTF_EdicionMod.getText());
+        double v2 = Double.parseDouble(JTF_ValorMod.getText());
+        ((Libros) CB_ModificarLibro.getSelectedItem()).setValor(v2);
+        if(admin.equalsIgnoreCase("vjcm1821")){
+                bitacora = "Admin Modifica Libros";
+                JTA_Bitacora.append(bitacora);
+            }else{
+                bitacora = "Usuario Modifico un Libro";
+            JTA_Bitacora.append(bitacora);
+            }//fin del else
+        
+         JOptionPane.showMessageDialog(this, "Cliente modificado exitosamente!!!!");
+            }else{
+                JOptionPane.showMessageDialog(this, "Sorry no es Admin");
+            }
+             
+
+      
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error!!!");
+        }
+       
+    }//GEN-LAST:event_JB_ModificarLibroMouseClicked
+
+    private void JTf_CopiasDispModActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTf_CopiasDispModActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JTf_CopiasDispModActionPerformed
+
+    private void JB_ModificarUserMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_ModificarUserMouseClicked
+        // TODO add your handling code here:
+        try {
+            if (admin.equalsIgnoreCase("vjcm1821")) {
+                int index = CB_ModificarUsuario.getSelectedIndex();
+                usuar.get(index).setFecha_n(JDC_ModUser.getDate());
+                usuar.get(index).setNumero_tel(Integer.parseInt(JFF_NumeroTel.getText()));
+                usuar.get(index).setCorreo(JTF_ModCorreo.getText());
+                usuar.get(index).setNombre_completo(JTF_ModNombre.getText());
+                Object selec = CB_generoFMod.getSelectedItem();
+                String genero_fav = "";
+                genero_fav += selec;
+                usuar.get(index).setGenero(genero_fav);
+                AgregarComboBox();
+                JDC_ModUser.setDate(null);
+                JFF_NumeroTel.setText("");
+                JTF_ModCorreo.setText("");
+                JTF_ModNombre.setText("");
+                CB_generoFMod.setSelectedItem(0);
+                if (admin.equalsIgnoreCase("vjcm1821")) {
+                    bitacora = "Admin Modifica Libros";
+                    JTA_Bitacora.append(bitacora);
+                } else {
+                    bitacora = "Usuario Modifico un Libro";
+                    JTA_Bitacora.append(bitacora);
+                }//fin del else   
+            }else{
+                JOptionPane.showMessageDialog(this, "Sorry no es Admin!!!");
+            }
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error!!!");
+        }
+
+    }//GEN-LAST:event_JB_ModificarUserMouseClicked
+
+    private void JTF_ModCorreoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTF_ModCorreoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JTF_ModCorreoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -849,7 +1283,32 @@ public class Menu_Administrador extends javax.swing.JFrame {
         });
     }
 
+    public void AgregarComboBox() {
+        DefaultComboBoxModel m
+                = (DefaultComboBoxModel) CB_ListarUsuario.getModel();
+        for (int i = 0; i < usuar.size(); i++) {
+            m.addElement(usuar.get(i));
+        }
+        CB_ListarUsuario.setModel(m);
+        CB_ModificarUsuario.setModel(m);
+        CB_EliminarUsuario.setModel(m);
+        CB_Amigos.setModel(m);
+    }//fin del metodo que agrega la lista de usuarios a los Respectivos ComboBoxes
+
+    public void admin(String admin) {
+        this.admin = admin;
+    }//fin del metodo que manda a llamar el login
+
+    public void User(ArrayList<Usuarios> ut) {
+        this.usuar = ut;
+    }//fin del metodo que recupera el arraylist de Users
+
+    public void us(Usuarios u) {
+        this.u = u;
+    }//fin del metodo de instancia
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> CB_Amigos;
     private javax.swing.JComboBox<String> CB_EliminarLibro;
     private javax.swing.JComboBox<String> CB_EliminarUsuario;
     private javax.swing.JComboBox<String> CB_GenerosLibro;
@@ -857,7 +1316,9 @@ public class Menu_Administrador extends javax.swing.JFrame {
     private javax.swing.JComboBox CB_ListarUsuario;
     private javax.swing.JComboBox<String> CB_ModificarLibro;
     private javax.swing.JComboBox<String> CB_ModificarUsuario;
+    private javax.swing.JComboBox<String> CB_generoFMod;
     private javax.swing.JLabel Edicion;
+    private javax.swing.JLabel Edicion1;
     private javax.swing.JButton JB_CrearLibro;
     private javax.swing.JButton JB_EliminarLibros;
     private javax.swing.JButton JB_EliminarListaLibro;
@@ -865,18 +1326,45 @@ public class Menu_Administrador extends javax.swing.JFrame {
     private javax.swing.JButton JB_EliminarUsuario;
     private javax.swing.JButton JB_LimpiarListaLibro;
     private javax.swing.JButton JB_LimpiarListaUsuario;
+    private javax.swing.JButton JB_ModificarLibro;
+    private javax.swing.JButton JB_ModificarUser;
+    private com.toedter.calendar.JDateChooser JDC_ModUser;
+    private javax.swing.JFormattedTextField JFF_NumeroTel;
+    private javax.swing.JTextArea JTA_Bitacora;
     private javax.swing.JTextField JTF_APublicacion;
+    private javax.swing.JTextField JTF_APublicacionMod;
     private javax.swing.JTextField JTF_Autor;
+    private javax.swing.JTextField JTF_AutorMod;
     private javax.swing.JTextField JTF_Descripcion;
+    private javax.swing.JTextField JTF_DescripcionMod;
     private javax.swing.JTextField JTF_Edicion;
+    private javax.swing.JTextField JTF_EdicionMod;
+    private javax.swing.JTextField JTF_ModCorreo;
+    private javax.swing.JTextField JTF_ModNombre;
     private javax.swing.JTextField JTF_Puntaje;
+    private javax.swing.JTextField JTF_PuntajeMod;
     private javax.swing.JTextField JTF_Titulo;
+    private javax.swing.JTextField JTF_TituloMod;
     private javax.swing.JTextField JTF_Valor;
+    private javax.swing.JTextField JTF_ValorMod;
     private javax.swing.JTable JT_Libros;
     private javax.swing.JTable JT_Usuario;
     private javax.swing.JTextField JTf_CopiasDisp;
+    private javax.swing.JTextField JTf_CopiasDispMod;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
@@ -885,8 +1373,11 @@ public class Menu_Administrador extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel17;
@@ -898,6 +1389,7 @@ public class Menu_Administrador extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTabbedPane jTabbedPane1;
@@ -907,16 +1399,9 @@ public class Menu_Administrador extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane5;
     // End of variables declaration//GEN-END:variables
 String admin;
-ArrayList<Libros> libro =new ArrayList();
-public void admin(String admin){
-    this.admin=admin;
-}
-ArrayList<Usuarios>usuar=new ArrayList();
-Usuarios u= new Usuarios();
-public void User (ArrayList<Usuarios>ut){
-    this.usuar=ut;
-}
-public void us(Usuarios u){
-    this.u=u;
-}
+String bitacora;
+    ArrayList<Libros> libro = new ArrayList();
+    ArrayList<Usuarios> usuar = new ArrayList();
+    Usuarios u = new Usuarios();
+
 }

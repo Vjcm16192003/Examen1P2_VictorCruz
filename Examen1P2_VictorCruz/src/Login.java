@@ -21,13 +21,13 @@ public class Login extends javax.swing.JFrame {
      */
     public Login() {
         initComponents();
-        DefaultComboBoxModel modelo
+        DefaultComboBoxModel model
                 = (DefaultComboBoxModel) CB_GeneroFav.getModel();
-        modelo.addElement("Default");
-        modelo.addElement("Fantasia");
-        modelo.addElement("Romance");
-        modelo.addElement("Acción");
-        modelo.addElement("Historia");
+        model.addElement("Default");
+        model.addElement("Fantasia");
+        model.addElement("Romance");
+        model.addElement("Acción");
+        model.addElement("Historia");
 
     }
 
@@ -266,32 +266,32 @@ public class Login extends javax.swing.JFrame {
 
     private void JB_LoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_LoginMouseClicked
        String username=JTF_UserName.getText();
-        String pass=JPF_Password.getText();
+        String password=JPF_Password.getText();
         if(JTF_UserName.getText().equalsIgnoreCase("vjcm1821")&&JPF_Password.getText().equalsIgnoreCase("12345")){
-            String admin="admin";
-            Menu_Administrador m= new Menu_Administrador();
-            m.User(user);
-            m.admin(admin);
-            m.setVisible(true);
+            String admin="vjcm1821";
+            Menu_Administrador menu= new Menu_Administrador();
+            menu.User(user);
+            menu.admin(admin);
+            menu.setVisible(true);
         }else{
-            boolean t=false;
-            int tn=0;
+            boolean validar_1=false;
+            int auxiliar=0;
             for (int i = 0; i < user.size(); i++) {
-                if(user.get(i).getUser().equalsIgnoreCase(username)&&user.get(i).getPass().equalsIgnoreCase(pass)){
-                    t=true;
-                    tn=i;
-                }
-            }
-            if(t){
-                u=user.get(tn);
-                Menu_Administrador m= new Menu_Administrador();
-                m.us(u);
-                m.User(user);
-                m.setVisible(true);
+                if(user.get(i).getUser().equalsIgnoreCase(username)&&user.get(i).getPass().equalsIgnoreCase(password)){
+                    validar_1=true;
+                    auxiliar=i;
+                }//fin del if
+            }//fin del for que recorre la lista de Usuarios
+            if(validar_1){
+                u=user.get(auxiliar);
+                Menu_Administrador menu_2= new Menu_Administrador();
+                menu_2.us(u);
+                menu_2.User(user);
+                menu_2.setVisible(true);
             }else{
-                JOptionPane.showMessageDialog(null,"El usario no existe");
-            }
-        } 
+                JOptionPane.showMessageDialog(null,"El que Ingrseo no existe, Procedad Registrarse");
+            }//fin de la condicion
+        }//finc del else principal 
        
             
     }//GEN-LAST:event_JB_LoginMouseClicked
@@ -387,5 +387,6 @@ public class Login extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
     Usuarios u = new Usuarios();
     ArrayList <Usuarios> user = new ArrayList();
+    String bitacora;
     
 }

@@ -52,7 +52,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                       <Component id="jTabbedPane2" min="-2" pref="886" max="-2" attributes="0"/>
-                      <EmptySpace pref="52" max="32767" attributes="0"/>
+                      <EmptySpace pref="110" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -61,7 +61,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                       <Component id="jTabbedPane2" min="-2" pref="530" max="-2" attributes="0"/>
-                      <EmptySpace pref="43" max="32767" attributes="0"/>
+                      <EmptySpace pref="81" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -287,17 +287,17 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                      <Component id="jTabbedPane3" min="-2" pref="882" max="-2" attributes="0"/>
-                      <EmptySpace pref="54" max="32767" attributes="0"/>
+                      <Component id="jTabbedPane3" min="-2" pref="957" max="-2" attributes="0"/>
+                      <EmptySpace pref="37" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                      <Component id="jTabbedPane3" min="-2" pref="532" max="-2" attributes="0"/>
-                      <EmptySpace pref="45" max="32767" attributes="0"/>
+                      <Component id="jTabbedPane3" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -322,7 +322,34 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="250" max="-2" attributes="0"/>
                               <Component id="CB_ModificarLibro" min="-2" pref="288" max="-2" attributes="0"/>
-                              <EmptySpace pref="342" max="32767" attributes="0"/>
+                              <EmptySpace pref="417" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="jLabel14" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Edicion1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel11" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel10" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel16" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel15" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel13" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel12" alignment="1" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="JTF_AutorMod" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="JTf_CopiasDispMod" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="JTF_DescripcionMod" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="JTF_APublicacionMod" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="JTF_EdicionMod" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="JTF_PuntajeMod" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="JTF_ValorMod" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="JTF_TituloMod" alignment="0" min="-2" pref="187" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="JB_ModificarLibro" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -331,7 +358,51 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                               <Component id="CB_ModificarLibro" min="-2" pref="39" max="-2" attributes="0"/>
-                              <EmptySpace pref="442" max="32767" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="JTF_TituloMod" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="JTF_AutorMod" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="JTf_CopiasDispMod" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel16" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="JTF_DescripcionMod" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="JTF_ValorMod" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="JTF_PuntajeMod" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="Edicion1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="JTF_EdicionMod" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace pref="30" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="JB_ModificarLibro" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="JTF_APublicacionMod" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -345,9 +416,79 @@
                           </StringArray>
                         </Property>
                       </Properties>
+                      <Events>
+                        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="CB_ModificarLibroItemStateChanged"/>
+                      </Events>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                       </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="JTF_APublicacionMod">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="JTF_DescripcionMod">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel10">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Valor"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="JTF_ValorMod">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel11">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Puntaje"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="JB_ModificarLibro">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Modificar Libro"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="JB_ModificarLibroMouseClicked"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel12">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Titulo"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="JTF_PuntajeMod">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="JTF_TituloMod">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="Edicion1">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Edicion"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel13">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Autor"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="JTF_EdicionMod">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="JTF_AutorMod">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel14">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="A&#xf1;o de Publicacion"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel15">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Copias Disponibles"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="JTf_CopiasDispMod">
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JTf_CopiasDispModActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel16">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Descripcion"/>
+                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -363,10 +504,58 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="260" max="-2" attributes="0"/>
-                              <Component id="CB_ModificarUsuario" min="-2" pref="268" max="-2" attributes="0"/>
-                              <EmptySpace pref="352" max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="260" max="-2" attributes="0"/>
+                                      <Component id="CB_ModificarUsuario" min="-2" pref="268" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="216" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="jLabel9" alignment="0" min="-2" pref="144" max="-2" attributes="0"/>
+                                                  <Component id="jLabel19" alignment="0" min="-2" pref="164" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="JDC_ModUser" min="-2" pref="174" max="-2" attributes="0"/>
+                                                  <Component id="JFF_NumeroTel" min="-2" pref="183" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="jLabel18" alignment="0" min="-2" pref="144" max="-2" attributes="0"/>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                                                      <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" attributes="0">
+                                                      <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                          <Component id="JTF_ModCorreo" pref="183" max="32767" attributes="0"/>
+                                                          <Component id="JTF_ModNombre" max="32767" attributes="0"/>
+                                                      </Group>
+                                                  </Group>
+                                                  <Group type="102" alignment="1" attributes="0">
+                                                      <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
+                                                      <Component id="CB_generoFMod" min="-2" pref="175" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace pref="356" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="JB_ModificarUser" min="-2" pref="150" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -375,7 +564,40 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                               <Component id="CB_ModificarUsuario" min="-2" pref="38" max="-2" attributes="0"/>
-                              <EmptySpace pref="443" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
+                                      <Component id="jLabel19" min="-2" pref="32" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="JDC_ModUser" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel9" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                                  <Component id="JFF_NumeroTel" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel18" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
+                                  <Component id="JTF_ModCorreo" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="JTF_ModNombre" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                                  <Component id="jLabel20" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="CB_generoFMod" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel17" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace pref="96" max="32767" attributes="0"/>
+                              <Component id="JB_ModificarUser" min="-2" pref="39" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -390,6 +612,65 @@
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                       </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="JTF_ModNombre">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel17">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Genero favorito:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel9">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Numero telefonico: "/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="CB_generoFMod">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="0"/>
+                        </Property>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JFormattedTextField" name="JFF_NumeroTel">
+                      <Properties>
+                        <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+                          <Format format="####-####" subtype="-1" type="5"/>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel18">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Correo Electronico: "/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="JTF_ModCorreo">
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JTF_ModCorreoActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel19">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Fecha de Nacimiento: "/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel20">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Nombre Completo: "/>
+                      </Properties>
+                    </Component>
+                    <Component class="com.toedter.calendar.JDateChooser" name="JDC_ModUser">
+                    </Component>
+                    <Component class="javax.swing.JButton" name="JB_ModificarUser">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Modificar Usuario"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="JB_ModificarUserMouseClicked"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -412,7 +693,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                       <Component id="jTabbedPane4" min="-2" pref="876" max="-2" attributes="0"/>
-                      <EmptySpace pref="59" max="32767" attributes="0"/>
+                      <EmptySpace pref="117" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -421,7 +702,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                       <Component id="jTabbedPane4" min="-2" pref="529" max="-2" attributes="0"/>
-                      <EmptySpace pref="44" max="32767" attributes="0"/>
+                      <EmptySpace pref="82" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -738,7 +1019,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                       <Component id="jTabbedPane5" min="-2" pref="882" max="-2" attributes="0"/>
-                      <EmptySpace pref="54" max="32767" attributes="0"/>
+                      <EmptySpace pref="112" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -747,7 +1028,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                       <Component id="jTabbedPane5" min="-2" pref="526" max="-2" attributes="0"/>
-                      <EmptySpace pref="39" max="32767" attributes="0"/>
+                      <EmptySpace pref="77" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -874,8 +1155,8 @@
         <Container class="javax.swing.JPanel" name="jPanel8">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="tab5">
-                <Property name="tabTitle" type="java.lang.String" value="tab5"/>
+              <JTabbedPaneConstraints tabName="Prestar Libros">
+                <Property name="tabTitle" type="java.lang.String" value="Prestar Libros"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -883,12 +1164,12 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="963" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="1021" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="595" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="633" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -896,8 +1177,8 @@
         <Container class="javax.swing.JPanel" name="jPanel9">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="tab6">
-                <Property name="tabTitle" type="java.lang.String" value="tab6"/>
+              <JTabbedPaneConstraints tabName="Devolver Libros">
+                <Property name="tabTitle" type="java.lang.String" value="Devolver Libros"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -905,15 +1186,114 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="963" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="1021" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="595" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="633" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanel12">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Agregar Amigos">
+                <Property name="tabTitle" type="java.lang.String" value="Agregar Amigos"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="323" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                          <Component id="CB_Amigos" min="-2" pref="287" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="411" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="101" max="-2" attributes="0"/>
+                      <Component id="CB_Amigos" min="-2" pref="40" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
+                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="388" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JComboBox" name="CB_Amigos">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="0"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButton1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Agregar Amigos"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanel11">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Bitacora">
+                <Property name="tabTitle" type="java.lang.String" value="Bitacora"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
+                      <Component id="jScrollPane1" min="-2" pref="889" max="-2" attributes="0"/>
+                      <EmptySpace pref="70" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace pref="50" max="32767" attributes="0"/>
+                      <Component id="jScrollPane1" min="-2" pref="564" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTextArea" name="JTA_Bitacora">
+                  <Properties>
+                    <Property name="columns" type="int" value="20"/>
+                    <Property name="rows" type="int" value="5"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+          </SubComponents>
         </Container>
       </SubComponents>
     </Container>
